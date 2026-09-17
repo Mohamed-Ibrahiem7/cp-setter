@@ -41,6 +41,9 @@ Conventions that are worth matching because every real statement follows them:
 - **Powers, not digits**: `$2 \cdot 10^5$`, `$10^9 + 7$`, never `200000` or `2*10^5` in prose.
 - **Math mode for quantities, plain text for counting words**: `$0$`, `$2 \cdot 10^5$`, but "the
   first two elements".
+- **No spaces inside `$...$`.** TeX derives the spacing around `+`, `-`, `\cdot` and `=` from the
+  operator itself, so `$5-2$` and `$5 - 2$` render identically — the source spaces are noise, not
+  layout. Real packages write `$a=1,b=0$`.
 - Never leave a bare `_` or `^` outside `$...$` — Polygon will fail to render it.
 - Symbols may be uppercase (`$N$`, `$C_i$`) or lowercase (`$n$`, `$a_i$`); both are used. Be
   consistent inside one problem, and use the same symbol in the legend, the input section and the
@@ -129,6 +132,22 @@ candidates and says which wins teaches the problem:
 Refer to samples the way Polygon numbers them: "In the first test case of the first example, ...".
 `\begin{itemize}` is the right tool for enumerating cases. `$$$$` on its own line is the idiom for
 a paragraph break inside a note.
+
+**Keep an arithmetic chain out of a single inline math group.** Spelling out every term —
+`$(10-1) + (1-1) + (3-1) + (1-1) + (6-1) = 16$` — drops forty characters of formula into one
+inline group. Breaking a line inside inline math costs TeX `\relpenalty` and `\binoppenalty`, so
+instead of splitting the formula it stretches the inter-word glue on the line before and moves the
+whole chain down: the paragraph then renders with a visible gap between every word. Two ways out,
+and both read better than the chain:
+
+- Give the arithmetic its own display line, where nothing has to be justified around it:
+  `$$(10-1) + (1-1) + (3-1) + (1-1) + (6-1) = 16$$`
+- Or keep only the part that carries information: "the three non-minimal elements cost $9$, $2$
+  and $5$, so the answer is $16$". Parenthesised subtractions that restate the input are
+  arithmetic the reader can already do.
+
+The same applies to a long chain anywhere in the statement, but the note is where it happens,
+because a note walks a sample through term by term.
 
 Do not give away the solution idea, and do not explain a sample whose answer is obvious.
 
