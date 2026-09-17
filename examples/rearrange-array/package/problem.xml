@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="7" short-name="manga" url="https://polygon.codeforces.com/p6xRl0b/a_samir04/manga">
+    <names>
+        <name language="english" value="Samir's TikTok Journey"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>10</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test cmd="generator -t 1 -max_n 4 -max_val 10" method="generated"/>
+                <test cmd="generator -t 10 -max_n 100 -max_val 1000" method="generated"/>
+                <test cmd="generator -t 100 -max_n 2000 -max_val 1000000000" method="generated"/>
+                <test cmd="generator -t 5 -max_n 200000 -max_val 1000000000 -mode random" method="generated"/>
+                <test cmd="generator -t 1 -max_n 200000 -max_val 1000000000 -mode sorted" method="generated"/>
+                <test cmd="generator -t 1 -max_n 200000 -max_val 1000000000 -mode rev_sorted" method="generated"/>
+                <test cmd="generator -t 1 -max_n 200000 -max_val 1000000000 -mode identical" method="generated"/>
+                <test cmd="generator -t 1 -max_n 200000 -max_val 1000000000 -mode extremes" method="generated"/>
+                <test cmd="generator -t 10000 -max_n 200000 -max_val 1000000000" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/generator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/generator.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="wrong-answer">
+                <source path="solutions/387949526_M.Ibrahem_wa3.cpp" type="cpp.g++17"/>
+                <binary path="solutions/387949526_M.Ibrahem_wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/Solution.java" type="java21"/>
+                <binary path="solutions/Solution.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/ac.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ac2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/tle.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/tle.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="*1100"/>
+        <tag value="greedy"/>
+        <tag value="sorting"/>
+    </tags>
+</problem>

@@ -1,0 +1,23 @@
+For each test case, you can make queries. To make a query, print a line in the following format:
+\begin{itemize}
+    \item \texttt{? t} ($1 \le t \le 10^9$)
+\end{itemize}
+
+After each query, read two integers $P$ and $D$ from the standard input. 
+\begin{itemize}
+    \item If you receive \texttt{-2 -2} and it does not match the expected logic (e.g., the interactor outputs \texttt{-1} as a penalty), it means you have made an invalid query or exceeded the limit of 80 queries. If this happens, your program must terminate immediately to receive a \texttt{Wrong Answer} verdict.
+\end{itemize}
+
+Once you have determined both $t_1$ and $t_2$, you must print the answer in the following format:
+\begin{itemize}
+    \item \texttt{! t1 t2} (you must output them in increasing order, i.e., $t_1 < t_2$).
+\end{itemize}
+
+After printing the answer, your program must immediately proceed to the next test case. Outputting the answer does \textbf{not} count towards the limit of 80 queries.
+
+After printing a query or the answer, do not forget to output an end of line and flush the output. Otherwise, you will get an \texttt{Idleness limit exceeded} verdict. To do this, use:
+\begin{itemize}
+    \item \texttt{fflush(stdout)} or \texttt{cout << endl} in C++;
+    \item \texttt{System.out.flush()} in Java;
+    \item \texttt{stdout.flush()} in Python.
+\end{itemize}

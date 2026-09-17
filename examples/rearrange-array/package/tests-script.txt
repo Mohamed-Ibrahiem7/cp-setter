@@ -1,0 +1,9 @@
+generator -t 1 -max_n 4 -max_val 10 > $
+generator -t 10 -max_n 100 -max_val 1000 > $
+generator -t 100 -max_n 2000 -max_val 1000000000 > $
+generator -t 5 -max_n 200000 -max_val 1000000000 -mode random > $
+generator -t 1 -max_n 200000 -max_val 1000000000 -mode sorted > $
+generator -t 1 -max_n 200000 -max_val 1000000000 -mode rev_sorted > $
+generator -t 1 -max_n 200000 -max_val 1000000000 -mode identical > $
+generator -t 1 -max_n 200000 -max_val 1000000000 -mode extremes > $
+generator -t 10000 -max_n 200000 -max_val 1000000000 > $

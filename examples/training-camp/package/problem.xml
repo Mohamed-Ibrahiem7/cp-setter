@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="59" short-name="amr-game" url="https://polygon.codeforces.com/p1qrKHM/Amrharb/amr-game">
+    <names>
+        <name language="english" value="Training Camp"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>536870912</memory-limit>
+            <test-count>30</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test description="Maximum C_i and V_i boundaries" method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="gen 10 100 100 100 0" method="generated"/>
+                <test cmd="gen 10 100 100 100 1" method="generated"/>
+                <test cmd="gen 10 100 100 100 2" method="generated"/>
+                <test cmd="gen 10 100 100 100 3" method="generated"/>
+                <test cmd="gen 10 100 100 100 4" method="generated"/>
+                <test cmd="gen 100 5000 100000 100000 0" method="generated"/>
+                <test cmd="gen 100 5000 100000 100000 1" method="generated"/>
+                <test cmd="gen 100 5000 100000 100000 2" method="generated"/>
+                <test cmd="gen 100 5000 100000 100000 3" method="generated"/>
+                <test cmd="gen 100 5000 100000 100000 4" method="generated"/>
+                <test cmd="gen 10000 200000 10 1000000000 0" method="generated"/>
+                <test cmd="gen 10000 200000 10 1000000000 1" method="generated"/>
+                <test cmd="gen 10000 200000 10 1000000000 2" method="generated"/>
+                <test cmd="gen 10000 200000 10 1000000000 3" method="generated"/>
+                <test cmd="gen 10000 200000 10 1000000000 4" method="generated"/>
+                <test cmd="gen 1 200000 1000000000 1000000000 0" method="generated"/>
+                <test cmd="gen 1 200000 1000000000 1000000000 1" method="generated"/>
+                <test cmd="gen 1 200000 1000000000 1000000000 2" method="generated"/>
+                <test cmd="gen 1 200000 1000000000 1000000000 3" method="generated"/>
+                <test cmd="gen 1 200000 1000000000 1000000000 4" method="generated"/>
+                <test cmd="gen 10000 200000 1000000000 1000000000 0" method="generated"/>
+                <test cmd="gen 10000 200000 1000000000 1000000000 1" method="generated"/>
+                <test cmd="gen 10000 200000 1000000000 1000000000 2" method="generated"/>
+                <test cmd="gen 10000 200000 1000000000 1000000000 3" method="generated"/>
+                <test cmd="gen 10000 200000 1000000000 1000000000 4" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen2.cpp" type="cpp.g++17"/>
+                <binary path="files/gen2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::wcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/387081473_Ahmed_Salah7_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387081473_Ahmed_Salah7_ok.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/387084283_Ahmed_Salah7_wa12.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084283_Ahmed_Salah7_wa12.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/387084293_Ahmed_Salah7_tl17.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084293_Ahmed_Salah7_tl17.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/MainA.java" type="java21"/>
+                <binary path="solutions/MainA.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main.cpp" type="cpp.g++17"/>
+                <binary path="solutions/main.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/main2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/main2.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/samir.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/samir.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

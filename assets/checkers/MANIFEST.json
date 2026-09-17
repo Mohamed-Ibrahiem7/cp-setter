@@ -1,0 +1,62 @@
+{
+  "source_repo": "https://github.com/MikeMirzayanov/testlib",
+  "commit": "1e4e8a24c79c6bad3becbdb5a332ffc352b7d5dd",
+  "fetched": "2026-09-17T04:45:09",
+  "files": {
+    "testlib.h": {
+      "upstream": "testlib.h",
+      "bytes": 206468,
+      "sha256": "bb323e3c89285214966076e0d23d5a295c5f6126da7ff198c1276ddb95ecb1a0"
+    },
+    "wcmp.cpp": {
+      "upstream": "checkers/wcmp.cpp",
+      "bytes": 902,
+      "sha256": "81b8c97b755ff7e6331c212a054ab7d1a2378cc65786a0439f78e379c60e9fec"
+    },
+    "ncmp.cpp": {
+      "upstream": "checkers/ncmp.cpp",
+      "bytes": 1487,
+      "sha256": "ba4c764def40f3a5687f5db2143e48e983116e0676e2da7566c9fedca1d23a2e"
+    },
+    "hcmp.cpp": {
+      "upstream": "checkers/hcmp.cpp",
+      "bytes": 839,
+      "sha256": "3f3d3a38cbf23e5719d0aad6dc7d292db1f9a23db15a5e03895b7c8df8107f2f"
+    },
+    "fcmp.cpp": {
+      "upstream": "checkers/fcmp.cpp",
+      "bytes": 776,
+      "sha256": "9058e47a60f20ffd7abca8d34af8c29e5829e969cc49b5ef25bb24e8a6f57161"
+    },
+    "lcmp.cpp": {
+      "upstream": "checkers/lcmp.cpp",
+      "bytes": 1137,
+      "sha256": "b9f5c7946652558df2e097da12848825de98eb2068e9ccf17e421dfcc852874f"
+    },
+    "yesno.cpp": {
+      "upstream": "checkers/yesno.cpp",
+      "bytes": 814,
+      "sha256": "8958610bdf29d10ee411efa046081b8a863ffa624341a4a3ef07c875bc2eb982"
+    },
+    "nyesno.cpp": {
+      "upstream": "checkers/nyesno.cpp",
+      "bytes": 2097,
+      "sha256": "dc42b50580377b1fddffe5da7a4d3f9989622ef3eaac5a7e3213b8912976a548"
+    },
+    "rcmp4.cpp": {
+      "upstream": "checkers/rcmp4.cpp",
+      "bytes": 777,
+      "sha256": "21b0fc9713d42464c04dcb300f6c518e6c62c72c916a3e6c124fa592cf91e10b"
+    },
+    "rcmp6.cpp": {
+      "upstream": "checkers/rcmp6.cpp",
+      "bytes": 778,
+      "sha256": "bde9ec5a1bd164c01ee0abaee2f3fce881664401af253d08e67c0180eea2bea0"
+    },
+    "rcmp9.cpp": {
+      "upstream": "checkers/rcmp9.cpp",
+      "bytes": 784,
+      "sha256": "48227808765808be0804baa63fcad841db77b92f31e7ad7df9eb84ca84e3f934"
+    }
+  }
+}

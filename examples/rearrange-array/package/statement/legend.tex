@@ -1,0 +1,13 @@
+Samir had always dreamed of becoming a TikTok star, so he started his journey by rearranging everything around him---literally! His first vlog was all about finding the perfect arrangement, and now he needs your help to make it as impressive as possible.
+
+You are given an array $a$ consisting of $n$ integers, where $n$ is divisible by $4$.
+
+You can rearrange the elements of the array in any order you want. Let the rearranged array be $b_1, b_2, \dots, b_n$.
+
+Your task is to find a rearrangement $b$ that maximizes the value of:
+$$S_1(b) = b_1 - b_2 + b_3 - b_4 + \dots + b_{n-1} - b_n$$
+
+Among all rearrangements that achieve the maximum possible value of $S_1(b)$, you must choose one that also maximizes:
+$$S_2(b)=b_1+b_2-b_3-b_4+\cdots+b_{n-3}+b_{n-2}-b_{n-1}-b_n.$$
+
+If there are multiple such rearrangements, output any of them.

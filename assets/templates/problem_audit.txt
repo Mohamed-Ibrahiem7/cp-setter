@@ -1,0 +1,91 @@
+Problem: <ProblemName>
+Interactive: <no | yes -- query limit <...> per <test case | run>>
+Intended solution: <one line>
+Intended complexity: <per test case> ; <over the aggregate bound>
+Constraints: t <= <...>, n <= <...>, a_i in [<...>, <...>], sum of n <= <...>
+Time limit: <x.x> s    Memory limit: <xxx> MB
+
+Verification run id: NOT VERIFIED
+Source digest:       NOT VERIFIED
+
+Every line below defaults to NOT VERIFIED. Change a line only to a status that
+"python scripts/cpsetter.py verify" actually produced for the run named above.
+The five statuses are PASS, FAIL, NOT VERIFIED, INFRASTRUCTURE FAILURE and
+NOT APPLICABLE; the last one always needs a reason.
+
+Problem understanding: NOT VERIFIED   <- CONFIRMED only after the setter confirms
+
+Statement:
+  LaTeX compatibility (Polygon subset): NOT VERIFIED
+  Multiple test cases: NOT VERIFIED
+  Constraints consistent with validator: NOT VERIFIED
+  Statement licenses everything the generators emit: NOT VERIFIED
+
+Testset:
+  Exactly 30 official indices, 1..30, no gaps or collisions: NOT VERIFIED
+  <- interactive: the test files hold only the hidden data, and there are no .a answers
+  Samples declared and inside the testset: NOT VERIFIED
+  Every test validated: NOT VERIFIED
+  No duplicate official test contents: NOT VERIFIED
+
+Validator:
+  Compilation: NOT VERIFIED
+  Constraint consistency: NOT VERIFIED
+  Aggregate bound enforced: NOT VERIFIED
+  Rejects out-of-range input: NOT VERIFIED   <- record how many illegal inputs were tried
+
+Checker:
+  Type: <standard | custom>
+  Checker: <std::ncmp.cpp | checker.cpp>
+  Why not a standard checker: <required only when shipping a custom checker;
+                               "the problem is interactive" is a sufficient reason>
+  Accepts jury answer on all tests: NOT VERIFIED
+  Accepts alternative valid answers: NOT VERIFIED
+
+Interactor (interactive problems only; delete this block otherwise):
+  Compilation: NOT VERIFIED
+  Sentinel sent before every rejection: NOT VERIFIED   <- or the contestant deadlocks
+  EOF checked before every participant read: NOT VERIFIED
+  Contestant mistakes are _wa/_pe, never ensuref: NOT VERIFIED
+  Query limit enforced in the interactor: NOT VERIFIED
+  Rejects extra output after the final answer: NOT VERIFIED
+  Query limit: <n> per <test case | run>; intended solution uses <m>
+
+Solutions (Polygon tag in brackets):
+  accepted.cpp   [main]      NOT VERIFIED
+  Accepted.java  [accepted]  NOT VERIFIED
+  C++/Java agreement on all tests: NOT VERIFIED
+      <- interactive: both are accepted by the interactor; there is no output to compare
+  Every solution flushes after every line: NOT VERIFIED   <- interactive only
+  Stress vs brute force: NOT VERIFIED   <- only PASS with a recorded 'stress' run
+
+Wrong solutions:
+  wrong_answer_1.cpp  [wrong-answer]
+    Mistake: <the misconception, one line>
+    Genuine wrong-answer kill on test: NOT VERIFIED
+    Realism review: NOT VERIFIED   <- a crash or timeout is not a wrong-answer kill
+
+TLE solutions:
+  tle_1.cpp  [time-limit-exceeded]
+    Complexity: <O(n^2)>
+    Exceeds the limit on test(s): NOT VERIFIED
+    Correct wherever it finishes: NOT VERIFIED
+
+Generators:
+  gen.cpp: NOT VERIFIED   modes: <random, sorted, equal, ...>
+
+Test map:
+   1   <manual, sample -- why this sample was chosen>
+   2   <manual -- boundary this test pins down>
+   3-8 <script -- size ladder, one case, n = 1 .. max>
+   ...
+
+Artificial WA hacks detected: NOT VERIFIED
+Artificial TLE hacks detected: NOT VERIFIED
+
+Final status: NOT VERIFIED
+
+READY may replace the line above only when the verification run named at the top
+reports overall PASS for the current source digest, and every line here says PASS
+or a justified NOT APPLICABLE. "python scripts/cpsetter.py audit <dir>" re-checks
+that claim against the latest report and fails if the package has changed since.

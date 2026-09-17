@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="14" short-name="the-blind-artillery" url="https://polygon.codeforces.com/p6EAlRj/aqassem2004/the-blind-artillery">
+    <names>
+        <name language="english" value="The Blind Artillery"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <tutorials latex-pdf-mode="obsolete">
+        <tutorial charset="UTF-8" language="english" mathjax="true" path="statements/english/tutorial.tex" type="application/x-tex"/>
+        <tutorial charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/tutorial.html" type="text/html"/>
+        <tutorial language="english" path="statements/.pdf/english/tutorial.pdf" type="application/pdf"/>
+    </tutorials>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>30</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test method="manual"/>
+                <test cmd="gen 1" method="generated"/>
+                <test cmd="gen 2" method="generated"/>
+                <test cmd="gen 3" method="generated"/>
+                <test cmd="gen 4" method="generated"/>
+                <test cmd="gen 5" method="generated"/>
+                <test cmd="gen 6" method="generated"/>
+                <test cmd="gen 7" method="generated"/>
+                <test cmd="gen 8" method="generated"/>
+                <test cmd="gen 9" method="generated"/>
+                <test cmd="gen 10" method="generated"/>
+                <test cmd="gen 11" method="generated"/>
+                <test cmd="gen 12" method="generated"/>
+                <test cmd="gen 13" method="generated"/>
+                <test cmd="gen 14" method="generated"/>
+                <test cmd="gen 15" method="generated"/>
+                <test cmd="gen 16" method="generated"/>
+                <test cmd="gen 17" method="generated"/>
+                <test cmd="gen 18" method="generated"/>
+                <test cmd="gen 19" method="generated"/>
+                <test cmd="gen 20" method="generated"/>
+                <test cmd="gen 21" method="generated"/>
+                <test cmd="gen 22" method="generated"/>
+                <test cmd="gen 23" method="generated"/>
+                <test cmd="gen 24" method="generated"/>
+                <test cmd="gen 25" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/interactor.cpp" type="cpp.g++17"/>
+                <binary path="files/interactor.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <interactor>
+            <source path="files/interactor.cpp" type="cpp.g++17"/>
+            <binary path="files/interactor.exe" type="exe.win32"/>
+        </interactor>
+        <validators>
+            <validator>
+                <source path="files/val.cpp" type="cpp.g++17"/>
+                <binary path="files/val.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/JavaSol.java" type="java21"/>
+                <binary path="solutions/JavaSol.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/TLE.cpp" type="cpp.g++17"/>
+                <binary path="solutions/TLE.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/WA.cpp" type="cpp.g++17"/>
+                <binary path="solutions/WA.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/acc.cpp" type="cpp.g++17"/>
+                <binary path="solutions/acc.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/main.cpp" type="cpp.g++17"/>
+                <binary path="solutions/main.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="binary search"/>
+        <tag value="div2-c"/>
+        <tag value="interactive"/>
+    </tags>
+</problem>

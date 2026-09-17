@@ -1,0 +1,23 @@
+You are a military engineer testing a newly developed artillery cannon. The cannon is positioned inside a deep underground trench. When fired, the projectile follows a downward-opening parabolic trajectory given by the equation: $h(t) = -at^2 + bt + c$ where $h(t)$ is the height of the projectile relative to the ground level at timestamp $t$, and $a, b, c$ are unknown real numbers with $a > 0$.
+
+Since the cannon is underground, the projectile starts its journey strictly below the ground. It will eventually break the surface, fly through the air, reach a maximum height (peak), and then fall back down, piercing the ground and continuing its descent underground.
+
+This means there are exactly two integer timestamps $t_1$ and $t_2$ ($1 \le t_1 < t_2 \le 10^9$) where the projectile is exactly at ground level ($h(t_1) = h(t_2) = 0$).
+
+You do not know the exact trajectory equation, but your cannon is equipped with a highly advanced sensor. You can query the sensor with a specific timestamp $t$. The sensor will report two integers, $P$ and $D$:
+\begin{itemize}
+    \item \textbf{$P$ (Position):} Reports the position of the projectile relative to the ground.
+    \begin{itemize}
+        \item $1$: if the projectile is strictly above ground ($h(t) > 0$).
+        \item $-1$: if the projectile is strictly below ground ($h(t) < 0$).
+        \item $0$: if the projectile is exactly on the ground ($h(t) = 0$).
+    \end{itemize}
+    \item \textbf{$D$ (Direction):} Reports the vertical direction of the projectile.
+    \begin{itemize}
+        \item $1$: if the projectile is moving strictly upwards (ascending).
+        \item $-1$: if the projectile is moving strictly downwards (descending).
+        \item $0$: if the projectile is exactly at its maximum height (the peak of the parabola).
+    \end{itemize}
+\end{itemize}
+
+Your task is to find the exact values of $t_1$ and $t_2$ using at most \textbf{80} queries per testcase.

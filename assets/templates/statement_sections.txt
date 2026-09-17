@@ -1,0 +1,57 @@
+These four blocks go into four separate files. Copy the body only -- do not copy the
+"=== ... ===" delimiter lines, and do not add section headings, the problem title, or the
+time and memory limits. Polygon supplies those.
+
+In Polygon these become, in order: Legend, Input format, Output format, Notes. The Notes
+section is optional; leave the note file empty rather than inventing content for it.
+
+Note the conventions used below: "---" for the em dash (not a Unicode dash), "\ldots" in
+sequences, powers rather than digit strings, and a bound in parentheses followed by "---"
+and the meaning for every value introduced.
+
+=== <ProblemName> statement.txt ===
+
+You are given an array $a$ of $n$ integers.
+
+In one operation you may pick an index $i$ ($1 \le i \le n$) and replace $a_i$ with $-a_i$.
+You may apply the operation \textbf{at most once} on each index.
+
+Find the maximum possible value of $a_1 + a_2 + \ldots + a_n$.
+
+=== <ProblemName> input.txt ===
+
+The first line contains a single integer $t$ ($1 \le t \le 10^4$) --- the number of test cases.
+
+The first line of each test case contains a single integer $n$ ($1 \le n \le 2 \cdot 10^5$) ---
+the length of the array.
+
+The second line of each test case contains $n$ integers $a_1, a_2, \ldots, a_n$
+($-10^9 \le a_i \le 10^9$) --- the elements of the array.
+
+It is guaranteed that the sum of $n$ over all test cases does not exceed $2 \cdot 10^5$.
+
+=== <ProblemName> output.txt ===
+
+For each test case, print a single integer --- the maximum possible sum.
+
+=== <ProblemName> note.txt ===
+
+In the first test case, applying the operation to the second element turns $[3, -5, 2]$ into
+$[3, 5, 2]$ with sum $10$. Leaving the array unchanged gives $0$, and flipping any other single
+element gives less, so $10$ is the maximum.
+
+In the second test case every element is already positive, so no operation is applied.
+
+=== if the answer is a real number, the output section instead ends with ===
+
+Your answer will be considered correct if its absolute or relative error does not exceed
+$10^{-6}$.
+
+Formally, let your answer be $a$, and the jury's answer be $b$. Your answer is accepted if and
+only if $\frac{|a - b|}{\max(1, |b|)} \le 10^{-6}$.
+
+=== if several outputs are valid, the output section instead ends with ===
+
+If there are multiple answers, print any of them.
+
+(That sentence requires a custom checker -- see references/checker.md.)

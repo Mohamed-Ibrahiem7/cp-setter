@@ -1,0 +1,34 @@
+Test map for halving-the-odds, reconstructed from problem.xml.
+Time limit 1500 ms, memory limit 512 MB, 30 tests in the testset.
+Manual tests are files added in the Tests tab; the script's $ numbers around them.
+
+  1  generated gen -t 1 -maxn 1 -sumn 1 [SAMPLE]
+  2  generated gen -t 1 -maxn 2 -sumn 2 [SAMPLE]
+  3  generated gen -t 1 -maxn 3 -sumn 3
+  4  generated gen -t 1 -maxn 10 -sumn 10
+  5  generated gen -t 1 -maxn 20 -sumn 20
+  6  generated gen -t 1 -maxn 50 -sumn 50
+  7  generated gen -t 1 -maxn 100 -sumn 100
+  8  generated gen -t 1 -maxn 200 -sumn 200
+  9  generated gen -t 1 -maxn 500 -sumn 500
+ 10  generated gen -t 1 -maxn 1000 -sumn 1000
+ 11  generated gen -t 1 -maxn 2000 -sumn 2000
+ 12  generated gen -t 1 -maxn 5000 -sumn 5000
+ 13  generated gen -t 5 -maxn 10 -sumn 50
+ 14  generated gen -t 10 -maxn 20 -sumn 200
+ 15  generated gen -t 20 -maxn 50 -sumn 1000
+ 16  generated gen -t 50 -maxn 100 -sumn 5000
+ 17  generated gen -t 100 -maxn 50 -sumn 5000
+ 18  generated gen -t 500 -maxn 10 -sumn 5000
+ 19  generated gen -t 1000 -maxn 5 -sumn 5000
+ 20  generated gen -t 2 -maxn 2500 -sumn 5000
+ 21  generated gen -t 3 -maxn 1667 -sumn 5000
+ 22  generated gen -t 5 -maxn 1000 -sumn 5000
+ 23  generated gen -t 2 -maxn 5000 -sumn 5000
+ 24  generated gen -t 4 -maxn 1250 -sumn 5000
+ 25  generated gen -t 8 -maxn 625 -sumn 5000
+ 26  generated gen -t 25 -maxn 200 -sumn 5000
+ 27  generated gen -t 200 -maxn 25 -sumn 5000
+ 28  generated gen -t 1000 -maxn 1 -sumn 1000
+ 29  generated gen -t 999 -maxn 5 -sumn 4995
+ 30  generated gen -t 2 -maxn 3 -sumn 4

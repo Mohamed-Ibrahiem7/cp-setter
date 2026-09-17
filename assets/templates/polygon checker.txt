@@ -1,0 +1,18 @@
+Standard Polygon checker: std::ncmp.cpp
+
+Reason: every test case has exactly one correct output — a single integer per test
+case — so no custom checker is needed. ncmp.cpp compares one or more signed 64-bit
+integers, ignoring whitespace, and rejects a token that is not an integer.
+
+Answer range: fits in signed 64-bit, so no big-integer handling and no tolerance
+are required.
+
+Alternatives considered:
+  wcmp.cpp  - also whitespace-insensitive, but compares tokens as text, so a
+              solution printing 1e9 or nan would be compared as a string rather
+              than rejected. ncmp is the stricter choice for a numeric answer.
+  fcmp.cpp  - rejected: exact line comparison would fail correct submissions that
+              differ only in trailing whitespace.
+  custom    - rejected: the output is a single determined value, so a custom
+              checker would only reimplement ncmp and add a program that can be
+              wrong.

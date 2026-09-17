@@ -1,0 +1,20 @@
+To ask a query, you will need to print \t{'?'} indicating this is a query; then print a character \t{'A'} or \t{'B'} and an integer $n (1 \leq n \leq 10^{9})$.
+
+After that, the judge will answer you with $F(A, n)$ if the input character is \t{'A'} or $F(B, n)$ if the input character is \t{'B'}. It is guaranteed that $(0 \leq F(A, n), F(B, n) \leq 10^{18})$.
+
+To query your answer, you will need to print \t{'!'} indicating this is the answer; then an integer which is the number of divisors of $A \times B$ modulo $10^9 + 7$ .
+
+Then, if the answer is correct, you will get an \t{Accepted} verdict; otherwise, you will get a \t{wrong answer} verdict.
+
+Note that any wrong/invalid output will be considered as a \t{wrong answer} verdict.
+
+You can ask at most $8500$ queries. Note that the answer query is not counted as a query; only question queries count.
+
+If you didn't query your answer or made more than $8500$ queries, you will receive a \t{wrong answer} verdict. 
+
+After printing each line, do not forget to output the end of line and flush the output buffer; otherwise, you will receive the \t{Idleness limit exceeded} verdict. To flush, use:
+
+\begin{itemize}
+  \item \t{ fflush(stdout) } or \t{ cout.flush() } in C++;
+  \item stdout.flush() in Python;
+\end{itemize}

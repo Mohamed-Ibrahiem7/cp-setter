@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="27" short-name="halving-the-odds" url="https://polygon.codeforces.com/p08BJig/Mnesy/halving-the-odds">
+    <names>
+        <name language="english" value="Boxes and Coins"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1500</time-limit>
+            <memory-limit>536870912</memory-limit>
+            <test-count>30</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen -t 1 -maxn 1 -sumn 1" method="generated" sample="true"/>
+                <test cmd="gen -t 1 -maxn 2 -sumn 2" method="generated" sample="true"/>
+                <test cmd="gen -t 1 -maxn 3 -sumn 3" method="generated"/>
+                <test cmd="gen -t 1 -maxn 10 -sumn 10" method="generated"/>
+                <test cmd="gen -t 1 -maxn 20 -sumn 20" method="generated"/>
+                <test cmd="gen -t 1 -maxn 50 -sumn 50" method="generated"/>
+                <test cmd="gen -t 1 -maxn 100 -sumn 100" method="generated"/>
+                <test cmd="gen -t 1 -maxn 200 -sumn 200" method="generated"/>
+                <test cmd="gen -t 1 -maxn 500 -sumn 500" method="generated"/>
+                <test cmd="gen -t 1 -maxn 1000 -sumn 1000" method="generated"/>
+                <test cmd="gen -t 1 -maxn 2000 -sumn 2000" method="generated"/>
+                <test cmd="gen -t 1 -maxn 5000 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 5 -maxn 10 -sumn 50" method="generated"/>
+                <test cmd="gen -t 10 -maxn 20 -sumn 200" method="generated"/>
+                <test cmd="gen -t 20 -maxn 50 -sumn 1000" method="generated"/>
+                <test cmd="gen -t 50 -maxn 100 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 100 -maxn 50 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 500 -maxn 10 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 1000 -maxn 5 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 2 -maxn 2500 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 3 -maxn 1667 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 5 -maxn 1000 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 2 -maxn 5000 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 4 -maxn 1250 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 8 -maxn 625 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 25 -maxn 200 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 200 -maxn 25 -sumn 5000" method="generated"/>
+                <test cmd="gen -t 1000 -maxn 1 -sumn 1000" method="generated"/>
+                <test cmd="gen -t 999 -maxn 5 -sumn 4995" method="generated"/>
+                <test cmd="gen -t 2 -maxn 3 -sumn 4" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/387082455_Ahmed_Salah7_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387082455_Ahmed_Salah7_ok.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/387084589_Ahmed_Salah7_wa3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084589_Ahmed_Salah7_wa3.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/387084596_Ahmed_Salah7_tl11.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084596_Ahmed_Salah7_tl11.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/Main.java" type="java21"/>
+                <binary path="solutions/Main.jar" type="jar"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/cpp_correct.cpp" type="cpp.g++17"/>
+                <binary path="solutions/cpp_correct.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded-or-accepted">
+                <source path="solutions/java_correct.java" type="java8"/>
+                <binary path="solutions/java_correct.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/tle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/tle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wrong.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wrong.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="*2300"/>
+        <tag value="dp"/>
+        <tag value="math"/>
+        <tag value="probabilities"/>
+    </tags>
+</problem>

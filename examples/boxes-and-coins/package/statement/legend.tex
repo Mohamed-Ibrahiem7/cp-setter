@@ -1,0 +1,20 @@
+You have two boxes, $A$ and $B$, both initially empty.
+
+The following process is performed for exactly $n$ days. On each day, one coin is added to one of the two boxes. The coin is added to box $A$ with probability $\frac{1}{2}$ and to box $B$ with probability $\frac{1}{2}$, independently of all previous days.
+
+At most once during the entire process, immediately after that day's coin is added, you may perform the following operation:
+
+\begin{itemize}
+\item Choose one of the two boxes.
+\item If the chosen box currently contains $x$ coins, replace the number of coins in it with $\left\lfloor \frac{x}{2} \right\rfloor$.
+\end{itemize}
+
+You may also choose not to perform the operation at all.
+
+Let $a_i$ and $b_i$ denote the numbers of coins in boxes $A$ and $B$, respectively, after day $i$. These values are considered after both the coin addition and the optional operation on that day.
+
+Your score is the number of days $i$ such that $a_i > b_i$.
+
+Your decision whether to perform the operation, and which box to choose if you perform it, may depend on all coin placements observed up to that moment.
+
+Assuming that you play optimally, determine the maximum possible expected value of your score.

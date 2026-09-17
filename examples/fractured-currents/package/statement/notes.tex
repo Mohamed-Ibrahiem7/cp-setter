@@ -1,0 +1,9 @@
+In the first example, there is only one vertex, so there are no pairs of distinct connected vertices. Therefore, the score is $0$ both before and after removing the self-loop.
+
+In the second example, the graph is the path $1 - 2 - 3.$
+
+If we remove the edge between vertices $1$ and $2$, only vertices $2$ and $3$ remain connected. The resulting score is $a_2 \oplus a_3 = 95 \oplus 71 = 24.$
+
+If we remove the edge between vertices $2$ and $3$, only vertices $1$ and $2$ remain connected. The resulting score is $a_1 \oplus a_2 = 55 \oplus 95 = 104.$
+
+Therefore, the minimum possible score is $24$.

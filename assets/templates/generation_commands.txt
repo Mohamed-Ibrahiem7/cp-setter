@@ -1,0 +1,41 @@
+<#-- Polygon test script. Paste into Tests -> Script.                        -->
+<#-- Manual tests are files in the Tests tab and occupy the first indices;   -->
+<#-- $ resolves to the smallest free index, so this block starts after them. -->
+<#-- Lines here + manual tests must total exactly 30 (25 below + 5 manual).  -->
+
+<#-- Size ladder: one case, growing. Failures land on readable tests. -->
+gen -t 1 -maxn 1 -sumn 1 > $
+gen -t 1 -maxn 3 -sumn 3 > $
+gen -t 1 -maxn 10 -sumn 10 > $
+gen -t 1 -maxn 100 -sumn 100 > $
+gen -t 1 -maxn 1000 -sumn 1000 > $
+gen -t 1 -maxn 20000 -sumn 20000 > $
+
+<#-- Structural modes at a small size, one per contestant assumption. -->
+gen -t 20 -maxn 50 -sumn 1000 -mode sorted > $
+gen -t 20 -maxn 50 -sumn 1000 -mode equal > $
+gen -t 20 -maxn 50 -sumn 1000 -mode twovalue > $
+gen -t 20 -maxn 50 -sumn 1000 -mode extremes > $
+
+<#-- Same modes at full size: the wrong-answer killers. -->
+gen -t 10 -maxn 20000 -sumn 200000 -mode sorted > $
+gen -t 10 -maxn 20000 -sumn 200000 -mode equal > $
+gen -t 10 -maxn 20000 -sumn 200000 -mode twovalue > $
+gen -t 10 -maxn 20000 -sumn 200000 -mode extremes > $
+
+<#-- Small value ranges, where duplicates and collisions are dense. -->
+gen -t 50 -maxn 200 -sumn 10000 -maxval 2 > $
+gen -t 50 -maxn 200 -sumn 10000 -maxval 10 > $
+gen -t 50 -maxn 200 -sumn 10000 -maxval 1000 > $
+
+<#-- The aggregate bound reached different ways: these kill different solutions. -->
+gen -t 1 -maxn 200000 -sumn 200000 > $
+gen -t 2 -maxn 100000 -sumn 200000 > $
+gen -t 100 -maxn 2000 -sumn 200000 > $
+gen -t 10000 -maxn 20 -sumn 200000 > $
+gen -t 10000 -maxn 200000 -sumn 200000 > $
+
+<#-- TLE killers: maximum work for the slow approach. -->
+gen -t 1 -maxn 200000 -sumn 200000 -mode extremes > $
+gen -t 1 -maxn 200000 -sumn 200000 -mode sorted > $
+gen -t 10000 -maxn 20 -sumn 200000 -mode equal > $

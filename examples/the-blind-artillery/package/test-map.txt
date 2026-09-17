@@ -1,0 +1,35 @@
+Test map for the-blind-artillery, reconstructed from problem.xml.
+Time limit 2000 ms, memory limit 256 MB, 30 tests in the testset.
+INTERACTIVE: the testset files hold the hidden data only; there are no .a answer
+files, and the interactor decides the verdict.
+Manual tests are files added in the Tests tab; the script's $ numbers around them.
+  1  manual    file tests/01 [SAMPLE]
+  2  manual    file tests/02
+  3  manual    file tests/03
+  4  generated gen 1
+  5  generated gen 2
+  6  generated gen 3
+  7  generated gen 4
+  8  generated gen 5
+  9  generated gen 6
+ 10  generated gen 7
+ 11  generated gen 8
+ 12  generated gen 9
+ 13  generated gen 10
+ 14  generated gen 11
+ 15  generated gen 12
+ 16  generated gen 13
+ 17  generated gen 14
+ 18  generated gen 15
+ 19  generated gen 16
+ 20  generated gen 17
+ 21  generated gen 18
+ 22  generated gen 19
+ 23  generated gen 20
+ 24  generated gen 21
+ 25  generated gen 22
+ 26  generated gen 23
+ 27  generated gen 24
+ 28  generated gen 25
+ 29  manual    file tests/29
+ 30  manual    file tests/30

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Native build outputs
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+
+# cp-setter generated workspaces and local verification output
+.cpsetter-build/
+**/.cpsetter-build/
+work/
+outputs/
+scratch/
+tmp/
+temp/
+*.log
+*.tmp
+verification.json
+
+# Internal development and review artifacts
+evidence/
+
+# Editors and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini

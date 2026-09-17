@@ -1,0 +1,12 @@
+There is a hidden integer $N$ such that $1 \leq N \leq 10^9$. Your task is to find this number using an interactive process.
+
+You may guess any integer $X$ ($1 \leq X \leq 10^9$). For each guess, the judge will respond with one of the following:
+\begin{itemize}
+  \item ``\texttt{>}'' --- if $N > X$,
+  \item ``\texttt{<}'' --- if $N < X$,
+  \item ``\texttt{=}'' --- if $N = X$.
+\end{itemize}
+
+When you find the hidden number, output ``\texttt{! N}'' (where $N$ is the hidden number you found) and terminate your program immediately.
+
+If you make more than 30 guesses, you will receive a Wrong Answer verdict.

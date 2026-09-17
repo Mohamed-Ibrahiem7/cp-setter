@@ -1,0 +1,7 @@
+You are given an undirected graph with $n$ vertices and $m$ edges. The vertices are numbered from $1$ to $n$, and vertex $i$ has a non-negative integer value $a_i$.
+
+The score of the graph is calculated as follows. For every pair of distinct vertices $(u, v)$ such that $u < v$ and there exists a path between $u$ and $v$, add $a_u \oplus a_v$ to the score, where $\oplus$ denotes the bitwise XOR operation.
+
+You must remove exactly one edge from the graph. After removing this edge, the score is recalculated using the remaining edges.
+
+Find the minimum possible score after removing exactly one edge. Since the answer may be large, print it modulo $10^9 + 7$.

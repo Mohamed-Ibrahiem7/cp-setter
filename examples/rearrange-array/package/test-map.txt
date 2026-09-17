@@ -1,0 +1,14 @@
+Test map for manga, reconstructed from problem.xml.
+Time limit 1000 ms, memory limit 256 MB, 10 tests in the testset.
+Manual tests are files added in the Tests tab; the script's $ numbers around them.
+
+  1  manual    (manual file) [SAMPLE]
+  2  generated generator -t 1 -max_n 4 -max_val 10
+  3  generated generator -t 10 -max_n 100 -max_val 1000
+  4  generated generator -t 100 -max_n 2000 -max_val 1000000000
+  5  generated generator -t 5 -max_n 200000 -max_val 1000000000 -mode random
+  6  generated generator -t 1 -max_n 200000 -max_val 1000000000 -mode sorted
+  7  generated generator -t 1 -max_n 200000 -max_val 1000000000 -mode rev_sorted
+  8  generated generator -t 1 -max_n 200000 -max_val 1000000000 -mode identical
+  9  generated generator -t 1 -max_n 200000 -max_val 1000000000 -mode extremes
+ 10  generated generator -t 10000 -max_n 200000 -max_val 1000000000

@@ -1,0 +1,40 @@
+Test map for guess-number, reconstructed from problem.xml.
+Time limit 1000 ms, memory limit 256 MB, 35 tests in the testset.
+INTERACTIVE: the testset files hold the hidden data only; there are no .a answer
+files, and the interactor decides the verdict.
+Manual tests are files added in the Tests tab; the script's $ numbers around them.
+  1  manual    file tests/01 [SAMPLE]
+  2  generated gen 1
+  3  generated gen 2
+  4  generated gen 3
+  5  generated gen 4
+  6  generated gen 5
+  7  generated gen 6
+  8  generated gen 7
+  9  generated gen 8
+ 10  generated gen 9
+ 11  generated gen 10
+ 12  generated gen 11
+ 13  generated gen 12
+ 14  generated gen 13
+ 15  generated gen 14
+ 16  generated gen 15
+ 17  generated gen 16
+ 18  generated gen 17
+ 19  generated gen 18
+ 20  generated gen 19
+ 21  generated gen 20
+ 22  generated gen 21
+ 23  generated gen 22
+ 24  generated gen 23
+ 25  generated gen 24
+ 26  generated gen 25
+ 27  generated gen 26
+ 28  generated gen 27
+ 29  generated gen 28
+ 30  generated gen 29
+ 31  generated gen 30
+ 32  manual    file tests/32
+ 33  manual    file tests/33
+ 34  manual    file tests/34
+ 35  manual    file tests/35

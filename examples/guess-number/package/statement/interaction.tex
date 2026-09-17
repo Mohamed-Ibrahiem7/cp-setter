@@ -1,0 +1,15 @@
+This is an interactive problem.  
+\begin{itemize}
+  \item To make a guess, output a line of the form ``\texttt{? X}'' (without quotes) and flush the output stream immediately.
+  \item After each guess, read the judge's response from the standard input.
+  \item When you find $N$, output ``\texttt{! N}'' and flush the output immediately.
+\end{itemize}
+
+If you do not flush the output after each guess, you may get an ``Idleness limit exceeded`` verdict.
+
+To flush the output stream, you may use:
+\begin{itemize}
+  \item \texttt{fflush(stdout);}, \texttt{cout.flush();} or \texttt{endl} in C++,
+  \item \texttt{System.out.flush();} in Java,
+  \item \texttt{stdout.flush()} in Python,
+\end{itemize}

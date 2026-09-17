@@ -1,0 +1,34 @@
+Test map for amr-game, reconstructed from problem.xml.
+Time limit 1000 ms, memory limit 512 MB, 30 tests in the testset.
+Manual tests are files added in the Tests tab; the script's $ numbers around them.
+
+  1  manual    (manual file) [SAMPLE]
+  2  manual    (manual file)  -- Maximum C_i and V_i boundaries
+  3  manual    (manual file)
+  4  manual    (manual file)
+  5  manual    (manual file)
+  6  generated gen 10 100 100 100 0
+  7  generated gen 10 100 100 100 1
+  8  generated gen 10 100 100 100 2
+  9  generated gen 10 100 100 100 3
+ 10  generated gen 10 100 100 100 4
+ 11  generated gen 100 5000 100000 100000 0
+ 12  generated gen 100 5000 100000 100000 1
+ 13  generated gen 100 5000 100000 100000 2
+ 14  generated gen 100 5000 100000 100000 3
+ 15  generated gen 100 5000 100000 100000 4
+ 16  generated gen 10000 200000 10 1000000000 0
+ 17  generated gen 10000 200000 10 1000000000 1
+ 18  generated gen 10000 200000 10 1000000000 2
+ 19  generated gen 10000 200000 10 1000000000 3
+ 20  generated gen 10000 200000 10 1000000000 4
+ 21  generated gen 1 200000 1000000000 1000000000 0
+ 22  generated gen 1 200000 1000000000 1000000000 1
+ 23  generated gen 1 200000 1000000000 1000000000 2
+ 24  generated gen 1 200000 1000000000 1000000000 3
+ 25  generated gen 1 200000 1000000000 1000000000 4
+ 26  generated gen 10000 200000 1000000000 1000000000 0
+ 27  generated gen 10000 200000 1000000000 1000000000 1
+ 28  generated gen 10000 200000 1000000000 1000000000 2
+ 29  generated gen 10000 200000 1000000000 1000000000 3
+ 30  generated gen 10000 200000 1000000000 1000000000 4

@@ -1,0 +1,20 @@
+\it{This is an interactive problem.}
+
+Let $g(x, d)$ be the number of times we can divide $x$ by $d$ without remainder. $g(12, 2) = 2$ and $g(12, 3) = 1$.
+
+Let $F(x, n) = \sum_{i = 1}^n g(x, p_i)$ where $p_i$ is the $i_{th}$ prime number $2, 3, 5, 7, 11, \dots$.
+
+There are two hidden numbers $A$ and $B$. Folka forgot them, but he saved them on his computer, but the computer has a strange structure; it took queries and responded with the answer.
+
+There is one supported query; the query requires a character \t{'A'} or \t{'B'} and an integer $n$; then the computer will respond with:
+
+\begin{itemize}
+  \item $F(A, n)$ if the input character is \t{'A'}.
+  \item $F(B, n)$ if the input character is \t{'B'}.
+\end{itemize}
+
+Folka's computer can handle at most $8500$ queries; after that, it will explode.
+
+Folka has just remembered their number of divisors; $A$ has $a$ divisors and $B$ has $b$ divisors. He will tell you the two numbers $a, b$, but because they may be up to $10^{100}$, he will tell you them modulo $10^9 + 7$. Finally, he wants to know the number of divisors of $A \times B$; since it might be large, print it modulo $10^9 + 7$.
+
+It is guaranteed that the numbers $A,B$ can be obtained from the first $10^{9}$ primes.

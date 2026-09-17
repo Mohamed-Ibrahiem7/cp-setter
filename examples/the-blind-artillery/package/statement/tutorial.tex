@@ -1,0 +1,25 @@
+The problem describes a downward-opening parabola that crosses the ground ($h(t) = 0$) at exactly two points: $t_1$ during its ascent, and $t_2$ during its descent. 
+
+Since $1 \le t_1 < t_2 \le 10^9$ and we have up to 80 queries, we can use two independent binary searches to find $t_1$ and $t_2$. Each binary search takes at most $\approx \log_2(10^9) \approx 30$ queries, totaling around 60 queries, which easily fits within the limit.
+
+1. Finding $t_1$ (The First Root)
+
+The first root $t_1$ always occurs while the projectile is strictly moving upwards ($D = 1$). We run a binary search on the range $[1, 10^9]$. For a query at time $m$:
+\begin{itemize}
+    \item If $P = 0$ and $D = 1$: We have found $t_1$.
+    \item If $D = -1$ or $D = 0$: The projectile is at its peak or already descending. This means we have overshot $t_1$ and moved too far to the right. We update our search range to the left: $r = m - 1$.
+    \item If $D = 1$ and $P = 1$: The projectile is moving upwards but is already above ground. We have passed $t_1$, so we go left: $r = m - 1$.
+    \item If $D = 1$ and $P = -1$: The projectile is moving upwards but is still below ground. We have not reached $t_1$ yet, so we go right: $l = m + 1$.
+\end{itemize}
+
+2. Finding $t_2$ (The Second Root)
+
+The second root $t_2$ always occurs while the projectile is strictly moving downwards ($D = -1$). We run another binary search on the range $[1, 10^9]$. For a query at time $m$:
+\begin{itemize}
+    \item If $P = 0$ and $D = -1$: We have found $t_2$.
+    \item If $D = 1$ or $D = 0$: The projectile is ascending or at its peak. We have not reached the descent phase yet. We must go right: $l = m + 1$.
+    \item If $D = -1$ and $P = 1$: The projectile is descending but still above ground. We have not reached $t_2$ yet, so we go right: $l = m + 1$.
+    \item If $D = -1$ and $P = -1$: The projectile is descending and is already below ground. We have passed $t_2$, so we go left: $r = m - 1$.
+\end{itemize}
+
+\textbf{Time Complexity:} $\mathcal{O}(\log(\max(t)))$ per testcase.

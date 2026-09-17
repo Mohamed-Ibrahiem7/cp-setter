@@ -1,0 +1,12 @@
+In the first test case ($n = 1$), one coin is added. With probability $0.5$ it lands in $A$ and $a_1 > b_1$; with probability $0.5$ it lands in $B$ and $a_1 < b_1$. The operation never helps on the very first day, so the expected score is $0.5$.
+$$$$
+In the second test case ($n = 2$), there are $4$ equally likely sequences: $AA$, $AB$, $BA$, $BB$.
+
+\begin{itemize}
+\item $AA$: If we do not perform the operation, box $A$ leads on both days. Score $= 2$.
+\item $AB$: After day $1$ we have $a=1,b=0$. After day $2$ we have $a=1,b=1$ (tie). Use the operation on $B$: $b$ becomes $\lfloor 1/2 \rfloor = 0$, so $a=1,b=0$ (lead). Score $= 2$.
+\item $BA$: After day $1$ we have $a=0,b=1$. After day $2$ we have $a=1,b=1$ (tie). Use the operation on $B$: $b$ becomes $0$, we lead. Score $= 1$.
+\item $BB$: $A$ never leads. Score $= 0$.
+\end{itemize}
+
+Expected score $= (2 + 2 + 1 + 0) / 4 = 1.25$.

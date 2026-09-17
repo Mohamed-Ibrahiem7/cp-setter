@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="27" short-name="one-cut-in-bitland" url="https://polygon.codeforces.com/p3azlHc/Mnesy/one-cut-in-bitland">
+    <names>
+        <name language="english" value="Fractured Currents"/>
+    </names>
+    <statements latex-pdf-mode="obsolete">
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>31</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test cmd="gen -n 1 -m 1 -maxval 10 -type path" method="generated" sample="true"/>
+                <test cmd="gen -n 3 -m 2 -maxval 100 -type path" method="generated" sample="true"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type star" method="generated"/>
+                <test cmd="gen -n 50000 -m 50000 -maxval 1000000000 -type bridges" method="generated"/>
+                <test cmd="gen -n 447 -m 99681 -maxval 1000000000 -type complete" method="generated"/>
+                <test cmd="gen -n 5 -m 4 -maxval 100 -type path" method="generated"/>
+                <test cmd="gen -n 10 -m 9 -maxval 1000 -type path" method="generated"/>
+                <test cmd="gen -n 10 -m 15 -maxval 1000 -type cycle" method="generated"/>
+                <test cmd="gen -n 10 -m 20 -maxval 1000 -type random" method="generated"/>
+                <test cmd="gen -n 10 -m 10 -maxval 1000 -type complete" method="generated"/>
+                <test cmd="gen -n 50 -m 49 -maxval 10000 -type tree" method="generated"/>
+                <test cmd="gen -n 100 -m 150 -maxval 100000 -type random_tree_plus" method="generated"/>
+                <test cmd="gen -n 100 -m 200 -maxval 100000 -type nobridges" method="generated"/>
+                <test cmd="gen -n 500 -m 1000 -maxval 1000000 -type bridges" method="generated"/>
+                <test cmd="gen -n 3000 -m 5000 -maxval 1000000000 -type random" method="generated"/>
+                <test cmd="gen -n 5000 -m 5000 -maxval 1000000000 -type cycle" method="generated"/>
+                <test cmd="gen -n 10000 -m 20000 -maxval 1000000000 -type nobridges" method="generated"/>
+                <test cmd="gen -n 50000 -m 100000 -maxval 1000000000 -type nobridges" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type random" method="generated"/>
+                <test cmd="gen -n 100000 -m 99999 -maxval 1000000000 -type tree" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type multiedge" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type selfloop" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type disconnected" method="generated"/>
+                <test cmd="gen -n 100 -m 1000 -maxval 1000000000 -type multiedge" method="generated"/>
+                <test cmd="gen -n 1 -m 1 -maxval 0 -type path" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type boundary" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1000000000 -type zerovals" method="generated"/>
+                <test cmd="gen -n 5000 -m 10000 -maxval 1000000000 -type multiedge" method="generated"/>
+                <test cmd="gen -n 100000 -m 100000 -maxval 1 -type random" method="generated"/>
+                <test method="manual"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="accepted">
+                <source path="solutions/387082538_Ahmed_Salah7_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387082538_Ahmed_Salah7_ok.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/387084675_Ahmed_Salah7_ok.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084675_Ahmed_Salah7_ok.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/387084681_Ahmed_Salah7_tl29.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387084681_Ahmed_Salah7_tl29.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/387257159_ApraCadabra_ali2005_syr_wa9.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/387257159_ApraCadabra_ali2005_syr_wa9.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/cpp_correct.cpp" type="cpp.g++17"/>
+                <binary path="solutions/cpp_correct.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/java_correct.java" type="java8"/>
+                <binary path="solutions/java_correct.jar" type="jar"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/tle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/tle.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wa.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wa.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/wrong.cpp" type="cpp.g++17"/>
+                <binary path="solutions/wrong.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="*2100"/>
+        <tag value="bitmasks"/>
+        <tag value="bridges"/>
+        <tag value="dfs and similar"/>
+        <tag value="graphs"/>
+    </tags>
+</problem>
