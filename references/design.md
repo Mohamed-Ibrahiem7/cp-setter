@@ -65,6 +65,12 @@ missing modulo reduction; losing original indices after sorting; a two-pointer t
 wrong pointer on equality; assuming the answer is monotone when it is not; assuming connectivity,
 or that the input graph is a tree; treating a local optimum as global.
 
+On an ad-hoc or closed-form problem none of those may fit, and the sources are different ones: a
+dropped absolute value or sign case; a floor where the answer needs a ceiling; one direction of a
+symmetric quantity; misreading which objects a single operation may touch, so that "he chooses
+exactly one of them" is read as "both"; handling only the orientation in which the first value is
+the smaller. An easy problem has a shorter roster, never an empty one.
+
 Pick the ones that genuinely fit. Three or four sharp wrong solutions are worth more than seven
 generic ones, and the number should come from the problem rather than from a quota.
 
@@ -75,6 +81,11 @@ The classic split is intended `O(n log n)` versus a natural `O(n^2)` or `O(n sqr
 the exposing input is not always "the biggest test": an `O(n^2)` solution is slowest with *one*
 maximal case, while a solution with a large per-test-case setup cost is slowest with the maximum
 number of tiny cases. You usually need both tests.
+
+When the answer is a closed form, the natural slower approach is the statement's own process run
+step by step: if the statement says "in one operation ...", a contestant will loop one operation
+at a time, and the value bounds decide how badly that loses. At large `t` the per-test I/O cost is
+itself a slow path. Both are real entries — see `references/solutions.md`.
 
 ## 6. Plan the 30 official tests
 

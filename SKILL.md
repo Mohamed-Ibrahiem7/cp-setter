@@ -219,6 +219,13 @@ are too weak — strengthen the tests, never weaken the solution. This is the wh
 keeping WA/TLE solutions in the package: they measure test quality, and a rigged one measures
 nothing.
 
+**The roster is never empty.** Every package ships at least one wrong-answer solution and at least
+one time-limit-exceeded solution. Zero of either asserts that the problem admits no misconception
+and no slower approach, and that has to be argued candidate by candidate in the audit rather than
+declared in one line. A one-line intended solution is not such an argument: a closed form and a
+naive step-by-step process describe the same problem, and the process is a real slow solution.
+`references/solutions.md` lists the three candidates that fit almost any easy problem.
+
 **Interactive problems are a branch, not a variant.** If the contestant has to *ask* for
 information the input file does not contain, the problem is interactive, and you say so in the
 understanding playback along with the query limit — before anything is written. An interactive

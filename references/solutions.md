@@ -147,10 +147,34 @@ stress it — the audit needs both. Verify by measurement, not by reasoning: an 
 constant can pass an `n = 2·10^5` test that you assumed would kill it, and finding that out from
 the timing run is much better than finding out from a contestant.
 
-## When to skip WA and TLE solutions
+## Every package ships WA and TLE solutions
 
-For a genuinely trivial problem — a direct formula, a one-line computation — there is no
-misconception worth modelling and no meaningful slower algorithm. Say so in the audit
-(`Wrong solutions: NOT APPLICABLE — direct formula, no realistic alternative approach`) rather
-than inventing a nonsense solution to fill the directory. An invented wrong solution is worse
-than none: it tells a reviewer the tests discriminate when they have not been asked to.
+The roster size comes from the problem, but zero is not a size. A package with no wrong solution
+and no slow solution has not been shown to discriminate: its thirty tests are aimed at nothing,
+and no audit line can say otherwise.
+
+A one-line answer is not evidence that no misconception exists. Look at what the statement
+invites, not at what the intended solution looks like — a closed form and a naive process often
+describe the same problem. Three candidates fit almost any "easy formula" problem:
+
+- **The statement describes a process, so simulate it literally.** When the problem is phrased as
+  a sequence of operations, stepping through them one at a time is correct, is what a contestant
+  writes before spotting the formula, and is slower by whatever factor the value bounds allow.
+  The slowness *is* the algorithm, so it is a legitimate `time-limit-exceeded` entry — not padding.
+- **The closed form drops a case.** A missing absolute value, a floor where the answer needs a
+  ceiling, one direction of a symmetric difference, the boundary where two branches meet. These
+  are ordinary `wrong-answer` entries, and they are silent: they print a plausible number.
+- **I/O is the slow path at maximum `t`.** With `t` at `10^5` or more, `Scanner` with a `println`
+  per line, or `cin` without `sync_with_stdio(false)`, is correct, idiomatic for a beginner, and
+  genuinely near the limit. This is the entry that tells you whether the time limit is calibrated
+  at all. Measure before you tag it — `time-limit-exceeded-or-accepted` is for the ones that land
+  on the line.
+
+The bar does not move. **Nothing artificial, ever**: no `if (n == 12345)`, no `volatile` padding
+loop, no sleep, no solution that reads the tests. If you cannot find a realistic wrong solution,
+you have not finished reading your own statement. A dummy is worse than nothing, because it tells
+a reviewer the tests discriminate when they have not been asked to.
+
+Only when all three candidate classes above genuinely fail may the audit record an empty roster,
+and it must then name each candidate you considered and why it does not apply — never a bare
+`NOT APPLICABLE`. An unexplained absence is a finding, not a decision.

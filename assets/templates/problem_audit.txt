@@ -60,12 +60,14 @@ Solutions (Polygon tag in brackets):
   Stress vs brute force: NOT VERIFIED   <- only PASS with a recorded 'stress' run
 
 Wrong solutions:
+      <- at least one entry; an empty roster must name every candidate considered
   wrong_answer_1.cpp  [wrong-answer]
     Mistake: <the misconception, one line>
     Genuine wrong-answer kill on test: NOT VERIFIED
     Realism review: NOT VERIFIED   <- a crash or timeout is not a wrong-answer kill
 
 TLE solutions:
+      <- at least one entry; the statement's own process, run step by step, counts
   tle_1.cpp  [time-limit-exceeded]
     Complexity: <O(n^2)>
     Exceeds the limit on test(s): NOT VERIFIED
